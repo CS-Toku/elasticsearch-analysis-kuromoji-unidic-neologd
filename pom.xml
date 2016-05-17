@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<name>elasticsearch-analysis-kuromoji-neologd</name>
+	<name>elasticsearch-analysis-kuromoji-unidic-neologd</name>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.codelibs</groupId>
-	<artifactId>elasticsearch-analysis-kuromoji-neologd</artifactId>
-	<version>2.3.1-SNAPSHOT</version>
+	<groupId>jp.toku</groupId>
+	<artifactId>elasticsearch-analysis-kuromoji-unidic-neologd</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<description>This plugin provides an analysis library for Kuromoji with Neologd.</description>
-	<inceptionYear>2011</inceptionYear>
+	<description>This plugin provides an analysis library for Kuromoji with UniDic and Neologd.</description>
+	<inceptionYear>2016</inceptionYear>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -16,9 +16,9 @@
 		</license>
 	</licenses>
 	<scm>
-		<connection>scm:git:git@github.com:codelibs/elasticsearch-analysis-kuromoji-neologd.git</connection>
-		<developerConnection>scm:git:git@github.com:codelibs/elasticsearch-analysis-kuromoji-neologd.git</developerConnection>
-		<url>git@github.com:codelibs/elasticsearch-analysis-kuromoji-neologd.git</url>
+		<connection>scm:git:git@github.com:CS-Toku/elasticsearch-analysis-kuromoji-unidic-neologd.git</connection>
+		<developerConnection>scm:git:git@github.com:CS-Toku/elasticsearch-analysis-kuromoji-unidic-neologd.git</developerConnection>
+		<url>git@github.com:CS-Toku/elasticsearch-analysis-kuromoji-unidic-neologd.git</url>
 	</scm>
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
