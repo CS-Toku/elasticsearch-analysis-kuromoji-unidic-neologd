@@ -17,15 +17,15 @@
  * under the License.
  */
 
-package org.codelibs.elasticsearch.kuromoji.neologd.index.analysis;
+package jp.toku.elasticsearch.kuromoji.unidic.neologd.index.analysis;
 
 import java.io.IOException;
 import java.io.Reader;
 
 import org.apache.lucene.analysis.Tokenizer;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapaneseTokenizer;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapaneseTokenizer.Mode;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.dict.UserDictionary;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer.Mode;
+import jp.toku.neologd.unidic.lucene.analysis.ja.dict.UserDictionary;
 import org.elasticsearch.ElasticsearchException;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.inject.assistedinject.Assisted;

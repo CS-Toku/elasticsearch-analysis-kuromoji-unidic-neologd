@@ -1,4 +1,5 @@
-package org.codelibs.elasticsearch.kuromoji.neologd.index.analysis;
+
+package jp.toku.elasticsearch.kuromoji.unidic.neologd.index.analysis;
 
 import java.util.HashSet;
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.Set;
 import org.apache.lucene.analysis.TokenStream;
 import org.codelibs.analysis.ja.PosConcatenationFilter;
 import org.codelibs.analysis.ja.PosConcatenationFilter.PartOfSpeechSupplier;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.tokenattributes.PartOfSpeechAttribute;
+import jp.toku.neologd.unidic.lucene.analysis.ja.tokenattributes.PartOfSpeechAttribute;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.inject.assistedinject.Assisted;
 import org.elasticsearch.common.settings.Settings;

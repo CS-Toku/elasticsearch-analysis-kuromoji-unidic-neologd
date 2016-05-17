@@ -17,20 +17,20 @@
  * under the License.
  */
 
-package org.codelibs.elasticsearch.kuromoji.neologd.indices.analysis;
+package jp.toku.elasticsearch.kuromoji.unidic.neologd.indices.analysis;
 
 import java.io.Reader;
 
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapaneseAnalyzer;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapaneseBaseFormFilter;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapaneseIterationMarkCharFilter;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapaneseKatakanaStemFilter;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapanesePartOfSpeechStopFilter;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapaneseReadingFormFilter;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapaneseTokenizer;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapaneseTokenizer.Mode;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapaneseAnalyzer;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapaneseBaseFormFilter;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapaneseIterationMarkCharFilter;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapaneseKatakanaStemFilter;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapanesePartOfSpeechStopFilter;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapaneseReadingFormFilter;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer.Mode;
 import org.elasticsearch.common.component.AbstractComponent;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.settings.Settings;

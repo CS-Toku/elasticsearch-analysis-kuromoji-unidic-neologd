@@ -17,14 +17,14 @@
  * under the License.
  */
 
-package org.codelibs.elasticsearch.kuromoji.neologd.index.analysis;
+package jp.toku.elasticsearch.kuromoji.unidic.neologd.index.analysis;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 import org.apache.lucene.analysis.TokenStream;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapanesePartOfSpeechStopFilter;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapanesePartOfSpeechStopFilter;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.inject.assistedinject.Assisted;
 import org.elasticsearch.common.settings.Settings;

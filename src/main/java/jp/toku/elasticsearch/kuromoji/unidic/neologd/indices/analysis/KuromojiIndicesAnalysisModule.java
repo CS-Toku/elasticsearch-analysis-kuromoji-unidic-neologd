@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package org.codelibs.elasticsearch.kuromoji.neologd.indices.analysis;
+package jp.toku.elasticsearch.kuromoji.unidic.neologd.indices.analysis;
 
 import org.elasticsearch.common.inject.AbstractModule;
 

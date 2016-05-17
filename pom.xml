@@ -27,11 +27,11 @@
 	</parent>
 	<properties>
 		<elasticsearch.version>2.3.2</elasticsearch.version>
-		<elasticsearch.plugin.classname>org.codelibs.elasticsearch.kuromoji.neologd.KuromojiNeologdPlugin</elasticsearch.plugin.classname>
+		<elasticsearch.plugin.classname>jp.toku.elasticsearch.kuromoji.unidic.neologd.KuromojiNeologdPlugin</elasticsearch.plugin.classname>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<lucene.version>5.5.0</lucene.version>
-		<kuromoji-ipadic-neologd.version>5.5.0-20160411</kuromoji-ipadic-neologd.version>
+		<kuromoji-unidic-neologd.version>5.5.0-20160512</kuromoji-unidic-neologd.version>
 	</properties>
 	<repositories>
 		<repository>
@@ -103,11 +103,6 @@
 			<artifactId>elasticsearch</artifactId>
 			<version>${elasticsearch.version}</version>
 			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.codelibs</groupId>
-			<artifactId>lucene-analyzers-kuromoji-ipadic-neologd</artifactId>
-			<version>${kuromoji-ipadic-neologd.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.codelibs</groupId>

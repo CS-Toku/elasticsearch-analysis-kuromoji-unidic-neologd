@@ -17,11 +17,11 @@
  * under the License.
  */
 
-package org.codelibs.elasticsearch.kuromoji.neologd.index.analysis;
+package jp.toku.elasticsearch.kuromoji.unidic.neologd.index.analysis;
 
 import java.io.Reader;
 
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapaneseIterationMarkCharFilter;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapaneseIterationMarkCharFilter;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.inject.assistedinject.Assisted;
 import org.elasticsearch.common.settings.Settings;

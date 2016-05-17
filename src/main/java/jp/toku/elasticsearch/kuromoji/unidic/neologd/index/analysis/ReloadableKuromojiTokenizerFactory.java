@@ -14,7 +14,7 @@
  * governing permissions and limitations under the License.
  */
 
-package org.codelibs.elasticsearch.kuromoji.neologd.index.analysis;
+package jp.toku.elasticsearch.kuromoji.unidic.neologd.index.analysis;
 
 import java.io.File;
 import java.io.IOException;
@@ -27,12 +27,12 @@ import java.util.EnumMap;
 
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.util.AttributeSource;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapaneseTokenizer;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapaneseTokenizer.Mode;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.JapaneseTokenizer.Type;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.dict.Dictionary;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.dict.TokenInfoFST;
-import org.codelibs.neologd.ipadic.lucene.analysis.ja.dict.UserDictionary;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer.Mode;
+import jp.toku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer.Type;
+import jp.toku.neologd.unidic.lucene.analysis.ja.dict.Dictionary;
+import jp.toku.neologd.unidic.lucene.analysis.ja.dict.TokenInfoFST;
+import jp.toku.neologd.unidic.lucene.analysis.ja.dict.UserDictionary;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.inject.assistedinject.Assisted;
 import org.elasticsearch.common.settings.Settings;
