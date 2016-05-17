@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.lucene.analysis.TokenStream;
-import org.codelibs.analysis.ja.PosConcatenationFilter;
-import org.codelibs.analysis.ja.PosConcatenationFilter.PartOfSpeechSupplier;
+import jp.toku.analysis.ja.PosConcatenationFilter;
+import jp.toku.analysis.ja.PosConcatenationFilter.PartOfSpeechSupplier;
 import jp.toku.neologd.unidic.lucene.analysis.ja.tokenattributes.PartOfSpeechAttribute;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.inject.assistedinject.Assisted;
