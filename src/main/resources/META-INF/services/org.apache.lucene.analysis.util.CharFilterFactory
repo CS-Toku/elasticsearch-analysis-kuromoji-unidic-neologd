@@ -13,4 +13,4 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseIterationMarkCharFilterFactory
+com.github.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseIterationMarkCharFilterFactory

@@ -13,7 +13,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseBaseFormFilterFactory
-jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseKatakanaStemFilterFactory
-jp.cstoku.neologd.unidic.lucene.analysis.ja.JapanesePartOfSpeechStopFilterFactory
-jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseReadingFormFilterFactory
+com.github.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseBaseFormFilterFactory
+com.github.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseKatakanaStemFilterFactory
+com.github.cstoku.neologd.unidic.lucene.analysis.ja.JapanesePartOfSpeechStopFilterFactory
+com.github.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseReadingFormFilterFactory

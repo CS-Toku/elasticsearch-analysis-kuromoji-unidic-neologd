@@ -16,9 +16,9 @@
 		</license>
 	</licenses>
 	<scm>
-		<connection>scm:git:git@github.com:CS-Toku/elasticsearch-analysis-kuromoji-unidic-neologd.git</connection>
-		<developerConnection>scm:git:git@github.com:CS-Toku/elasticsearch-analysis-kuromoji-unidic-neologd.git</developerConnection>
-		<url>git@github.com:CS-Toku/elasticsearch-analysis-kuromoji-unidic-neologd.git</url>
+		<connection>scm:git:git@github.com:cstoku/elasticsearch-analysis-kuromoji-unidic-neologd.git</connection>
+		<developerConnection>scm:git:git@github.com:cstoku/elasticsearch-analysis-kuromoji-unidic-neologd.git</developerConnection>
+		<url>git@github.com:cstoku/elasticsearch-analysis-kuromoji-unidic-neologd.git</url>
 	</scm>
 	<parent>
 		<groupId>org.sonatype.oss</groupId>
@@ -27,7 +27,7 @@
 	</parent>
 	<properties>
 		<elasticsearch.version>2.3.2</elasticsearch.version>
-		<elasticsearch.plugin.classname>jp.cstoku.elasticsearch.kuromoji.unidic.neologd.KuromojiNeologdPlugin</elasticsearch.plugin.classname>
+		<elasticsearch.plugin.classname>com.github.cstoku.elasticsearch.kuromoji.unidic.neologd.KuromojiNeologdPlugin</elasticsearch.plugin.classname>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<lucene.version>5.5.0</lucene.version>
