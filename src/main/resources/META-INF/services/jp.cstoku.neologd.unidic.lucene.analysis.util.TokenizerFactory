@@ -13,8 +13,4 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-org.apache.lucene.analysis.ja.JapaneseBaseFormFilterFactory
-org.apache.lucene.analysis.ja.JapaneseKatakanaStemFilterFactory
-org.apache.lucene.analysis.ja.JapaneseNumberFilterFactory
-org.apache.lucene.analysis.ja.JapanesePartOfSpeechStopFilterFactory
-org.apache.lucene.analysis.ja.JapaneseReadingFormFilterFactory
+jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizerFactory
