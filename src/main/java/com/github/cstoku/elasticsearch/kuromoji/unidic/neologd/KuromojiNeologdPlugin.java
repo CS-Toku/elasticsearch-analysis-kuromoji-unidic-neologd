@@ -13,12 +13,12 @@ import java.util.Collection;
 public class KuromojiNeologdPlugin extends Plugin {
     @Override
     public String name() {
-        return "analysis-kuromoji-neologd";
+        return "analysis-kuromoji-unidic-neologd";
     }
 
     @Override
     public String description() {
-        return "Kuromoji with Neologd analysis support";
+        return "Kuromoji with UniDic and Neologd analysis support";
     }
 
     @Override
