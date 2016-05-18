@@ -1,4 +1,4 @@
-package org.codelibs.elasticsearch.kuromoji.neologd;
+package jp.cstoku.elasticsearch.kuromoji.unidic.neologd;
 
 import org.codelibs.elasticsearch.runner.ElasticsearchClusterRunner;
 import org.codelibs.elasticsearch.runner.net.Curl;
@@ -48,7 +48,7 @@ public class KuromojiNeologdPluginTest {
                 settingsBuilder.put("index.number_of_shards", 1);
                 settingsBuilder.put("index.number_of_replicas", 0);
                 settingsBuilder.putArray("discovery.zen.ping.unicast.hosts", "localhost:9301-9310");
-                settingsBuilder.put("plugin.types", "org.codelibs.elasticsearch.kuromoji.neologd.KuromojiNeologdPlugin");
+                settingsBuilder.put("plugin.types", "jp.cstoku.elasticsearch.kuromoji.unidic.neologd.KuromojiNeologdPlugin");
                 settingsBuilder.put("index.unassigned.node_left.delayed_timeout","0");
             }
         }).build(newConfigs().clusterName(clusterName).numOfNode(numOfNode));
@@ -75,7 +75,7 @@ public class KuromojiNeologdPluginTest {
     }
 
     @Test
-    public void test_kuromoji_neologd() throws Exception {
+    public void test_kuromoji_unidic_neologd() throws Exception {
         userDictFiles = new File[numOfNode];
         for (int i = 0; i < numOfNode; i++) {
             String confPath = runner.getNode(i).settings().get("path.conf");
@@ -90,10 +90,10 @@ public class KuromojiNeologdPluginTest {
         final String type = "item";
 
         final String indexSettings = "{\"index\":{\"analysis\":{" + "\"tokenizer\":{"//
-                + "\"kuromoji_user_dict\":{\"type\":\"kuromoji_neologd_tokenizer\",\"mode\":\"extended\",\"user_dictionary\":\"userdict_ja.txt\"}"
+                + "\"kuromoji_user_dict\":{\"type\":\"kuromoji_unidic_neologd_tokenizer\",\"mode\":\"extended\",\"user_dictionary\":\"userdict_ja.txt\"}"
                 + "},"//
                 + "\"analyzer\":{"
-                + "\"ja_analyzer\":{\"type\":\"custom\",\"tokenizer\":\"kuromoji_user_dict\",\"filter\":[\"kuromoji_neologd_stemmer\"]}"
+                + "\"ja_analyzer\":{\"type\":\"custom\",\"tokenizer\":\"kuromoji_user_dict\",\"filter\":[\"kuromoji_unidic_neologd_stemmer\"]}"
                 + "}"//
                 + "}}}";
         runner.createIndex(index, Settings.builder().loadFromSource(indexSettings).build());
@@ -160,12 +160,12 @@ public class KuromojiNeologdPluginTest {
         final String type = "item";
 
         final String indexSettings = "{\"index\":{\"analysis\":{" + "\"tokenizer\":{"//
-                + "\"kuromoji_user_dict\":{\"type\":\"kuromoji_neologd_tokenizer\",\"mode\":\"extended\",\"user_dictionary\":\"userdict_ja.txt\"},"
-                + "\"kuromoji_user_dict_reload\":{\"type\":\"reloadable_kuromoji_neologd\",\"mode\":\"extended\",\"user_dictionary\":\"userdict_ja.txt\",\"reload_interval\":\"1s\"}"
+                + "\"kuromoji_user_dict\":{\"type\":\"kuromoji_unidic_neologd_tokenizer\",\"mode\":\"extended\",\"user_dictionary\":\"userdict_ja.txt\"},"
+                + "\"kuromoji_user_dict_reload\":{\"type\":\"reloadable_kuromoji_unidic_neologd\",\"mode\":\"extended\",\"user_dictionary\":\"userdict_ja.txt\",\"reload_interval\":\"1s\"}"
                 + "},"//
                 + "\"analyzer\":{"
-                + "\"ja_analyzer\":{\"type\":\"custom\",\"tokenizer\":\"kuromoji_user_dict\",\"filter\":[\"kuromoji_neologd_stemmer\"]},"
-                + "\"ja_reload_analyzer\":{\"type\":\"custom\",\"tokenizer\":\"kuromoji_user_dict_reload\",\"filter\":[\"kuromoji_neologd_stemmer\"]}"
+                + "\"ja_analyzer\":{\"type\":\"custom\",\"tokenizer\":\"kuromoji_user_dict\",\"filter\":[\"kuromoji_unidic_neologd_stemmer\"]},"
+                + "\"ja_reload_analyzer\":{\"type\":\"custom\",\"tokenizer\":\"kuromoji_user_dict_reload\",\"filter\":[\"kuromoji_unidic_neologd_stemmer\"]}"
                 + "}"//
                 + "}}}";
         runner.createIndex(index, Settings.builder().loadFromSource(indexSettings).build());
