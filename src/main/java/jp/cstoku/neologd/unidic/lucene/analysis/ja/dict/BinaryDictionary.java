@@ -151,12 +151,14 @@ public abstract class BinaryDictionary implements Dictionary {
   
   @Override
   public int getLeftId(int wordId) {
-    return buffer.getShort(wordId) >>> 3;
+    //return buffer.getShort(wordId) >>> 3;
+    return (buffer.getShort(wordId) & 0xffff) >>> 3;
   }
   
   @Override
   public int getRightId(int wordId) {
-    return buffer.getShort(wordId) >>> 3;
+    //return buffer.getShort(wordId) >>> 3;
+    return (buffer.getShort(wordId) & 0xffff) >>> 3;
   }
   
   @Override
