@@ -15,6 +15,5 @@
 
 jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseBaseFormFilterFactory
 jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseKatakanaStemFilterFactory
-jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseNumberFilterFactory
 jp.cstoku.neologd.unidic.lucene.analysis.ja.JapanesePartOfSpeechStopFilterFactory
 jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseReadingFormFilterFactory
