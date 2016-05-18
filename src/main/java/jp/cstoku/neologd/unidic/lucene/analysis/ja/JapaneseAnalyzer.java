@@ -21,13 +21,13 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.UserDictionary;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.cjk.CJKWidthFilter;
 import org.apache.lucene.analysis.core.LowerCaseFilter;
 import org.apache.lucene.analysis.core.StopFilter;
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer.Mode;
+import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.UserDictionary;
 import org.apache.lucene.analysis.util.CharArraySet;
 import org.apache.lucene.analysis.util.StopwordAnalyzerBase;
 

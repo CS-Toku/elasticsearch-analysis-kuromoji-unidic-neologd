@@ -20,10 +20,10 @@ package jp.cstoku.neologd.unidic.lucene.analysis.ja;
 import java.util.HashMap;
 import java.util.Map;
 
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.ConnectionCosts;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.Dictionary;
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer.Position;
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer.WrappedPositionArray;
+import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.ConnectionCosts;
+import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.Dictionary;
 
 
 // TODO: would be nice to show 2nd best path in a diff't

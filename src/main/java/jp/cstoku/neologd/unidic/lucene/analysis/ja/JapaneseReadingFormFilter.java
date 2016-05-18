@@ -17,11 +17,11 @@
 package jp.cstoku.neologd.unidic.lucene.analysis.ja;
 
 
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.util.ToStringUtil;
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.tokenattributes.ReadingAttribute;
+import jp.cstoku.neologd.unidic.lucene.analysis.ja.util.ToStringUtil;
 
 import java.io.IOException;
 
