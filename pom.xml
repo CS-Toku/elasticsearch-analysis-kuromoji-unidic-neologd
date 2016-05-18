@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>jp.toku</groupId>
 	<artifactId>elasticsearch-analysis-kuromoji-unidic-neologd</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>2.3.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<description>This plugin provides an analysis library for Kuromoji with UniDic and Neologd.</description>
 	<inceptionYear>2016</inceptionYear>
