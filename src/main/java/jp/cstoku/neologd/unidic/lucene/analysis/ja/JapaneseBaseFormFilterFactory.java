@@ -17,10 +17,10 @@
 package jp.cstoku.neologd.unidic.lucene.analysis.ja;
 
 
-import java.util.Map;
-
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.util.TokenFilterFactory;
+
+import java.util.Map;
 
 /**
  * Factory for {@link JapaneseBaseFormFilter}.

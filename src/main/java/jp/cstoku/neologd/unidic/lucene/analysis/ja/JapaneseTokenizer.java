@@ -17,22 +17,13 @@
 package jp.cstoku.neologd.unidic.lucene.analysis.ja;
 
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.EnumMap;
-import java.util.List;
-
-import org.apache.lucene.analysis.Tokenizer;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.CharacterDefinition;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.ConnectionCosts;
+import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.*;
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.Dictionary;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.TokenInfoDictionary;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.TokenInfoFST;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.UnknownDictionary;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.UserDictionary;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.tokenattributes.*;
+import jp.cstoku.neologd.unidic.lucene.analysis.ja.tokenattributes.BaseFormAttribute;
+import jp.cstoku.neologd.unidic.lucene.analysis.ja.tokenattributes.InflectionAttribute;
+import jp.cstoku.neologd.unidic.lucene.analysis.ja.tokenattributes.PartOfSpeechAttribute;
+import jp.cstoku.neologd.unidic.lucene.analysis.ja.tokenattributes.ReadingAttribute;
+import org.apache.lucene.analysis.Tokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.OffsetAttribute;
 import org.apache.lucene.analysis.tokenattributes.PositionIncrementAttribute;
@@ -43,6 +34,9 @@ import org.apache.lucene.util.AttributeFactory;
 import org.apache.lucene.util.IntsRef;
 import org.apache.lucene.util.RamUsageEstimator;
 import org.apache.lucene.util.fst.FST;
+
+import java.io.IOException;
+import java.util.*;
 
 // TODO: somehow factor out a reusable viterbi search here,
 // so other decompounders/tokenizers can reuse...

@@ -17,10 +17,10 @@
 package jp.cstoku.neologd.unidic.lucene.analysis.ja.dict;
 
 
-import java.io.IOException;
-
-import org.apache.lucene.util.fst.FST.Arc;
 import org.apache.lucene.util.fst.FST;
+import org.apache.lucene.util.fst.FST.Arc;
+
+import java.io.IOException;
 
 /**
  * Thin wrapper around an FST with root-arc caching for Japanese.

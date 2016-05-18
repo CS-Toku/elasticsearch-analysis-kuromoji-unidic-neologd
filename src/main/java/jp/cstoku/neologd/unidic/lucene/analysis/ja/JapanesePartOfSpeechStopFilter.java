@@ -17,11 +17,11 @@
 package jp.cstoku.neologd.unidic.lucene.analysis.ja;
 
 
-import java.util.Set;
-
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.tokenattributes.PartOfSpeechAttribute;
-import org.apache.lucene.analysis.util.FilteringTokenFilter;
 import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.util.FilteringTokenFilter;
+
+import java.util.Set;
 
 /**
  * Removes tokens that match a set of part-of-speech tags.

@@ -17,6 +17,14 @@
 package jp.cstoku.neologd.unidic.lucene.analysis.ja;
 
 
+import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer.Mode;
+import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.UserDictionary;
+import org.apache.lucene.analysis.util.ResourceLoader;
+import org.apache.lucene.analysis.util.ResourceLoaderAware;
+import org.apache.lucene.analysis.util.TokenizerFactory;
+import org.apache.lucene.util.AttributeFactory;
+import org.apache.lucene.util.IOUtils;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -26,14 +34,6 @@ import java.nio.charset.CharsetDecoder;
 import java.nio.charset.CodingErrorAction;
 import java.util.Locale;
 import java.util.Map;
-
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer.Mode;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.UserDictionary;
-import org.apache.lucene.analysis.util.TokenizerFactory;
-import org.apache.lucene.util.AttributeFactory;
-import org.apache.lucene.util.IOUtils;
-import org.apache.lucene.analysis.util.ResourceLoader;
-import org.apache.lucene.analysis.util.ResourceLoaderAware;
 
 /**
  * Factory for {@link JapaneseTokenizer}.

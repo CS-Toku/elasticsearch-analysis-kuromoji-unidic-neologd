@@ -17,14 +17,14 @@
 package jp.cstoku.neologd.unidic.lucene.analysis.ja.dict;
 
 
-import java.io.BufferedInputStream;
-import java.io.InputStream;
-import java.io.IOException;
-
 import org.apache.lucene.store.InputStreamDataInput;
 import org.apache.lucene.util.IOUtils;
 import org.apache.lucene.util.fst.FST;
 import org.apache.lucene.util.fst.PositiveIntOutputs;
+
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Binary dictionary implementation for a known-word dictionary model:

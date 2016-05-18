@@ -5,9 +5,10 @@ package jp.cstoku.analysis.ja;
 // (powered by Fernflower decompiler)
 //
 
-import java.util.Set;
-import org.apache.lucene.analysis.TokenStream;
 import jp.cstoku.analysis.ConcatenationFilter;
+import org.apache.lucene.analysis.TokenStream;
+
+import java.util.Set;
 
 public class PosConcatenationFilter extends ConcatenationFilter {
     private final Set<String> posTags;

@@ -19,30 +19,17 @@
 
 package jp.cstoku.elasticsearch.kuromoji.unidic.neologd.indices.analysis;
 
-import java.io.Reader;
-
+import jp.cstoku.neologd.unidic.lucene.analysis.ja.*;
+import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer.Mode;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.Tokenizer;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseAnalyzer;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseBaseFormFilter;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseIterationMarkCharFilter;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseKatakanaStemFilter;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapanesePartOfSpeechStopFilter;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseReadingFormFilter;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer.Mode;
 import org.elasticsearch.common.component.AbstractComponent;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.index.analysis.AnalyzerScope;
-import org.elasticsearch.index.analysis.CharFilterFactory;
-import org.elasticsearch.index.analysis.PreBuiltAnalyzerProviderFactory;
-import org.elasticsearch.index.analysis.PreBuiltCharFilterFactoryFactory;
-import org.elasticsearch.index.analysis.PreBuiltTokenFilterFactoryFactory;
-import org.elasticsearch.index.analysis.PreBuiltTokenizerFactoryFactory;
-import org.elasticsearch.index.analysis.TokenFilterFactory;
-import org.elasticsearch.index.analysis.TokenizerFactory;
+import org.elasticsearch.index.analysis.*;
 import org.elasticsearch.indices.analysis.IndicesAnalysisService;
+
+import java.io.Reader;
 
 /**
  * Registers indices level analysis components so, if not explicitly configured,

@@ -19,12 +19,10 @@
 
 package jp.cstoku.elasticsearch.kuromoji.unidic.neologd.index.analysis;
 
-import java.util.Set;
-
-import org.apache.lucene.analysis.util.CharArraySet;
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseAnalyzer;
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer;
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.UserDictionary;
+import org.apache.lucene.analysis.util.CharArraySet;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.inject.assistedinject.Assisted;
 import org.elasticsearch.common.settings.Settings;
@@ -33,6 +31,8 @@ import org.elasticsearch.index.Index;
 import org.elasticsearch.index.analysis.AbstractIndexAnalyzerProvider;
 import org.elasticsearch.index.analysis.Analysis;
 import org.elasticsearch.index.settings.IndexSettingsService;
+
+import java.util.Set;
 
 /**
  */

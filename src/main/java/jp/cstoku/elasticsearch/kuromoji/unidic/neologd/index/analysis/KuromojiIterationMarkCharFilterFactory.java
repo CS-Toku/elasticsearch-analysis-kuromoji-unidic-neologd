@@ -19,8 +19,6 @@
 
 package jp.cstoku.elasticsearch.kuromoji.unidic.neologd.index.analysis;
 
-import java.io.Reader;
-
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseIterationMarkCharFilter;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.inject.assistedinject.Assisted;
@@ -28,6 +26,8 @@ import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.index.Index;
 import org.elasticsearch.index.analysis.AbstractCharFilterFactory;
 import org.elasticsearch.index.settings.IndexSettingsService;
+
+import java.io.Reader;
 
 public class KuromojiIterationMarkCharFilterFactory extends AbstractCharFilterFactory {
 

@@ -1,23 +1,14 @@
 package jp.cstoku.elasticsearch.kuromoji.unidic.neologd;
 
-import java.util.Collection;
-
-import jp.cstoku.elasticsearch.kuromoji.unidic.neologd.index.analysis.KuromojiAnalyzerProvider;
-import jp.cstoku.elasticsearch.kuromoji.unidic.neologd.index.analysis.KuromojiBaseFormFilterFactory;
-import jp.cstoku.elasticsearch.kuromoji.unidic.neologd.index.analysis.KuromojiIterationMarkCharFilterFactory;
-import jp.cstoku.elasticsearch.kuromoji.unidic.neologd.index.analysis.KuromojiKatakanaStemmerFactory;
-import jp.cstoku.elasticsearch.kuromoji.unidic.neologd.index.analysis.KuromojiPartOfSpeechFilterFactory;
-import jp.cstoku.elasticsearch.kuromoji.unidic.neologd.index.analysis.KuromojiReadingFormFilterFactory;
-import jp.cstoku.elasticsearch.kuromoji.unidic.neologd.index.analysis.KuromojiTokenizerFactory;
-import jp.cstoku.elasticsearch.kuromoji.unidic.neologd.index.analysis.PosConcatenationFilterFactory;
-import jp.cstoku.elasticsearch.kuromoji.unidic.neologd.index.analysis.ReloadableKuromojiTokenizerFactory;
+import com.google.common.collect.ImmutableList;
+import jp.cstoku.elasticsearch.kuromoji.unidic.neologd.index.analysis.*;
 import jp.cstoku.elasticsearch.kuromoji.unidic.neologd.indices.analysis.KuromojiIndicesAnalysisModule;
 import org.elasticsearch.common.inject.Module;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.index.analysis.AnalysisModule;
 import org.elasticsearch.plugins.Plugin;
 
-import com.google.common.collect.ImmutableList;
+import java.util.Collection;
 
 public class KuromojiNeologdPlugin extends Plugin {
     @Override

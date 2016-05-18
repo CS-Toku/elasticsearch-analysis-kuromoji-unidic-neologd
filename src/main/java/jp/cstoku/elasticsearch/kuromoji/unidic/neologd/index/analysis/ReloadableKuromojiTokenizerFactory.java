@@ -16,23 +16,14 @@
 
 package jp.cstoku.elasticsearch.kuromoji.unidic.neologd.index.analysis;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.Reader;
-import java.lang.reflect.Field;
-import java.nio.file.Path;
-import java.security.AccessController;
-import java.security.PrivilegedAction;
-import java.util.EnumMap;
-
-import org.apache.lucene.analysis.Tokenizer;
-import org.apache.lucene.util.AttributeSource;
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer;
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer.Mode;
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.JapaneseTokenizer.Type;
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.Dictionary;
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.TokenInfoFST;
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.dict.UserDictionary;
+import org.apache.lucene.analysis.Tokenizer;
+import org.apache.lucene.util.AttributeSource;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.inject.assistedinject.Assisted;
 import org.elasticsearch.common.settings.Settings;
@@ -41,6 +32,15 @@ import org.elasticsearch.env.Environment;
 import org.elasticsearch.index.Index;
 import org.elasticsearch.index.analysis.AbstractTokenizerFactory;
 import org.elasticsearch.index.settings.IndexSettingsService;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.Reader;
+import java.lang.reflect.Field;
+import java.nio.file.Path;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
+import java.util.EnumMap;
 
 public class ReloadableKuromojiTokenizerFactory extends
         AbstractTokenizerFactory {

@@ -16,11 +16,11 @@
  */
 package jp.cstoku.neologd.unidic.lucene.analysis.ja;
 
-import java.util.Set;
-
 import jp.cstoku.neologd.unidic.lucene.analysis.ja.tokenattributes.PartOfSpeechAttribute;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.util.Lucene43FilteringTokenFilter;
+
+import java.util.Set;
 
 /**
  * Backcompat JapanesePartOfSpeechStopFilter for versions 4.3 and before.

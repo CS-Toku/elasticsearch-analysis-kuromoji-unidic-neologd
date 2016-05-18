@@ -17,14 +17,14 @@
 package jp.cstoku.neologd.unidic.lucene.analysis.ja;
 
 
-import java.io.IOException;
-
+import jp.cstoku.neologd.unidic.lucene.analysis.ja.tokenattributes.BaseFormAttribute;
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;
-import jp.cstoku.neologd.unidic.lucene.analysis.ja.tokenattributes.BaseFormAttribute;
 import org.apache.lucene.analysis.miscellaneous.SetKeywordMarkerFilter;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.analysis.tokenattributes.KeywordAttribute;
+
+import java.io.IOException;
 
 /**
  * Replaces term text with the {@link BaseFormAttribute}.
