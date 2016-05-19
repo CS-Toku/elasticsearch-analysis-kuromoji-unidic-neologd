@@ -25,6 +25,12 @@
 			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
 		</license>
 	</licenses>
+	<developers>
+		<developer>
+			<name>Takuya Tokuda</name>
+			<email>cs_toku@sce-toku.jp</email>
+		</developer>
+	</developers>
 	<scm>
 		<connection>scm:git:git@github.com:cstoku/elasticsearch-analysis-kuromoji-unidic-neologd.git</connection>
 		<developerConnection>scm:git:git@github.com:cstoku/elasticsearch-analysis-kuromoji-unidic-neologd.git</developerConnection>
@@ -76,7 +82,7 @@
 					<execution>
 						<id>attach-sources</id>
 						<goals>
-							<goal>jar-no-fork</goal>
+							<goal>jar</goal>
 						</goals>
 					</execution>
 				</executions>
