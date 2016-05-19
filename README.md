@@ -10,11 +10,11 @@ Elasticsearch Analysis UniDic-Neologd Plugin provides Tokenizer/CharFilter/Token
 | Version   | Tested on ES | neologd  |
 |:---------:|:------------:|:--------:|
 | master    | 2.3.X        |          |
-| 2.3.0     | 2.3.1        | 20160512 |
+| 2.3.2.0   | 2.3.2        | 20160512 |
 
 ## Installation
 
-    $ $ES_HOME/bin/plugin install CS-Toku/elasticsearch-analysis-kuromoji-unidic-neologd/2.3.0
+    $ $ES_HOME/bin/plugin install com.github.cstoku/elasticsearch-analysis-kuromoji-unidic-neologd/2.3.2.0
 
 ## References
 
