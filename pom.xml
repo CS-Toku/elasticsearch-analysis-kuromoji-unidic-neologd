@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<name>elasticsearch-analysis-kuromoji-neologd</name>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.codelibs</groupId>
-	<artifactId>elasticsearch-analysis-kuromoji-neologd</artifactId>
-	<version>2.3.1-SNAPSHOT</version>
+	<groupId>com.github.cstoku</groupId>
+	<artifactId>elasticsearch-analysis-kuromoji-unidic-neologd</artifactId>
+	<version>2.3.2.0</version>
 	<packaging>jar</packaging>
-	<description>This plugin provides an analysis library for Kuromoji with Neologd.</description>
-	<inceptionYear>2011</inceptionYear>
+	<name>Elasticsearch Analysis Kuromoji Unidic Neologd</name>
+	<description>This plugin provides an analysis library for Kuromoji with UniDic and Neologd.</description>
+	<url>https://github.com/cstoku/elasticsearch-analysis-kuromoji-unidic-neologd</url>
+	<inceptionYear>2016</inceptionYear>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+		</repository>
+	</distributionManagement>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
 			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
 		</license>
 	</licenses>
 	<scm>
-		<connection>scm:git:git@github.com:codelibs/elasticsearch-analysis-kuromoji-neologd.git</connection>
-		<developerConnection>scm:git:git@github.com:codelibs/elasticsearch-analysis-kuromoji-neologd.git</developerConnection>
-		<url>git@github.com:codelibs/elasticsearch-analysis-kuromoji-neologd.git</url>
+		<connection>scm:git:git@github.com:cstoku/elasticsearch-analysis-kuromoji-unidic-neologd.git</connection>
+		<developerConnection>scm:git:git@github.com:cstoku/elasticsearch-analysis-kuromoji-unidic-neologd.git</developerConnection>
+		<url>git@github.com:cstoku/elasticsearch-analysis-kuromoji-unidic-neologd.git</url>
 	</scm>
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>9</version>
-	</parent>
 	<properties>
 		<elasticsearch.version>2.3.2</elasticsearch.version>
-		<elasticsearch.plugin.classname>org.codelibs.elasticsearch.kuromoji.neologd.KuromojiNeologdPlugin</elasticsearch.plugin.classname>
+		<elasticsearch.plugin.classname>com.github.cstoku.elasticsearch.kuromoji.unidic.neologd.KuromojiNeologdPlugin</elasticsearch.plugin.classname>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<lucene.version>5.5.0</lucene.version>
-		<kuromoji-ipadic-neologd.version>5.5.0-20160411</kuromoji-ipadic-neologd.version>
+		<kuromoji-unidic-neologd.version>5.5.0-20160512</kuromoji-unidic-neologd.version>
 	</properties>
 	<repositories>
 		<repository>
@@ -71,6 +76,26 @@
 					<execution>
 						<id>attach-sources</id>
 						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<show>protected</show>
+					<encoding>UTF-8</encoding>
+					<charset>UTF-8</charset>
+					<docencoding>UTF-8</docencoding>
+					<excludePackageNames>com.github.cstoku.analysis:com.github.cstoku.neologd</excludePackageNames>
+				</configuration>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
 							<goal>jar</goal>
 						</goals>
 					</execution>
@@ -95,6 +120,29 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<extensions>true</extensions>
+				<configuration>
+					<serverId>ossrh</serverId>
+					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 	<dependencies>
@@ -103,16 +151,6 @@
 			<artifactId>elasticsearch</artifactId>
 			<version>${elasticsearch.version}</version>
 			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.codelibs</groupId>
-			<artifactId>lucene-analyzers-kuromoji-ipadic-neologd</artifactId>
-			<version>${kuromoji-ipadic-neologd.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.codelibs</groupId>
-			<artifactId>analyzers-ja</artifactId>
-			<version>5.5.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.codelibs</groupId>

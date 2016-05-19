@@ -1,6 +1,6 @@
-Copyright (C) 2015 Toshinori Sato (@overlast)
+Copyright (C) 2015-2016 Toshinori Sato (@overlast)
 
-      https://github.com/neologd/mecab-ipadic-neologd
+      https://github.com/neologd/mecab-unidic-neologd
 
     i. 本データは、株式会社はてなが提供するはてなキーワード一覧ファイル
        中の表記、及び、読み仮名の大半を使用している。
